@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Course from "../Course";
+import CourseButton from "../../components/CourseButton";
 import "./styles.css";
 
 class Main extends Component {
@@ -40,9 +40,9 @@ class Main extends Component {
     // return courses;
     return (
       <div className="course-box">
-        <Course name="카테고리1" />
-        <Course name="카테고리2" />
-        <Course name="카테고리3" />
+        <CourseButton name="카테고리1" />
+        <CourseButton name="카테고리2" />
+        <CourseButton name="카테고리3" />
       </div>
     );
   };

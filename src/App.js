@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
+import Main from "./views/Main";
 import { Link } from "react-router";
 import { Button } from "reactstrap";
 import "./App.css";
