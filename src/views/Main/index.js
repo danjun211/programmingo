@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import CourseButton from "../../components/CourseButton";
+import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
 import "./styles.css";
 
 class Main extends Component {
@@ -57,8 +59,10 @@ class Main extends Component {
     //   </div>
     // );
     return (
-      <div className="App">
+      <div className="Main">
+        <Nav />
         {this._renderCourses()}
+        <Footer />
       </div>
     );
   }

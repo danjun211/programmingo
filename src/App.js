@@ -1,18 +1,15 @@
 import React, { Component } from "react";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
-import Main from "./views/Main";
-import { Link } from "react-router";
-import { Button } from "reactstrap";
+import { Route } from "react-router-dom";
+import { Main, Questionare, Courses } from "./views";
 import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div class="wrapper">
-        <Nav />
-        <Main />
-        <Footer />
+      <div>
+        <Route exact path="/" component={Main} />
+        <Route path="/courses" component={Courses} />
+        <Route path="/questionare" component={Questionare} />
       </div>
     );
   }
