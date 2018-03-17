@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
 import "./styles.css";
 
 class CourseButton extends Component {
   render() {
-    return <Button color="warning">{this.props.name}</Button>;
+    return (
+      <div>
+        <button className="coursebutton">{this.props.name}</button>
+        <i class="fab fa-android fa-3x" />
+      </div>
+    );
   }
 }
 
