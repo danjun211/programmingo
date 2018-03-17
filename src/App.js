@@ -5,13 +5,12 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    return (
-      <div>
+    return <div>
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet" />
         <Route exact path="/" component={Main} />
-        <Route path="/courses" component={Courses} />
+        <Route path="/courses/:id" component={Courses} />
         <Route path="/questionare" component={Questionare} />
-      </div>
-    );
+      </div>;
   }
 }
 
