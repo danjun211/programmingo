@@ -49,7 +49,7 @@ class Main extends Component {
 
   render() {
     console.log("did render");
-    const { movies } = this.state;
+    const { courses } = this.state;
     // 함수명에 _(언더스코어) 쓰는 이유? 리액트 자체 함수와 나의 함수를 구분하기 위해서
     // return (
     //   <div className={movies ? "App" : "App--loading"}>
