@@ -1,0 +1,5 @@
+@media (max-width: 640px) {
+  .course_wrapper.course {
+    display: none;
+  }
+}
