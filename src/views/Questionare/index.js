@@ -91,12 +91,12 @@ class Questionare extends Component {
     let idx = 0;
     return (
       <Jumbotron>
-        <div>문제: {this.state.question.QuestionName}</div>
+        <div class="qf">문제: {this.state.question.QuestionName}</div>
         <ul>
           {Object.keys(this.state.question.answerText).map((answerKey, i) => {
             return (
-              <li key={i}>
-                <input
+              <li key={i} class="if">
+                <input 
                   type="radio"
                   name="answer"
                   data-idx={++idx}

@@ -2,7 +2,7 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #01dfa5;
+  background-color: #212529;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 
 .footer .footer_column {
   width: 33.3%;
-  height: 70px;
+  height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -9,9 +9,9 @@ class Main extends Component {
   state = {};
 
   categoryNames = {
-    _c1_: "카테고리1",
-    _c2_: "카테고리2",
-    _c3_: "카테고리3"
+    _c1_: "Level 1",
+    _c2_: "Level 2",
+    _c3_: "Level 3"
   };
 
   componentWillMount() {
@@ -58,9 +58,9 @@ class Main extends Component {
     const { courses } = this.state;
     return <div>
         <Nav />
-        <Jumbotron className="course_wrapper">
+        <div className="course_wrapper">
           {this._renderCourses()}
-        </Jumbotron>
+        </div >
         <Footer />
       </div>;
   }
