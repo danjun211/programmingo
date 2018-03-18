@@ -1,4 +1,21 @@
 .nav {
-  background: tomato;
+  background: #ffc107;
+  min-width: 50px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.login_btn {
+  font-weight: bold !important;
+}
+
+.logo {
+  padding: 3px;
+}
+
+.logo > h3 {
+  color: #ffc107;
+  background: #212529;
+}

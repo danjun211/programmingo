@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
-import { Button } from "reactstrap";
+import { Jumbotron, Button, Progress } from "reactstrap";
 import "./styles.css";
 
 class Questionare extends Component {
-  state = {};
+  state = {
+    score: 0
+  };
 
   idx = 1;
 
@@ -23,16 +25,17 @@ class Questionare extends Component {
     let questionList = await this._callApi(); // await: this._callApi()가 끝나길 기다리게 함. this._callApi가 끝나면 movies에 리턴값을 담는다.
     let reQuestion = {};
     let questionNumber = 0;
+    console.log(questionNumber);
     Object.keys(questionList).map((v, i) => {
       let removeUnderbar = parseInt(v.replace(/_/g, ""));
+      
       if (i === 0) {
-        questionNumber = parseInt(v[removeUnderbar]);
+        questionNumber = parseInt(removeUnderbar);
       }
       reQuestion[removeUnderbar] = questionList[v];
     });
-
+    
     questionList = reQuestion;
-
     this.setState({
       questionList,
       questionNumber: questionNumber,
@@ -67,25 +70,27 @@ class Questionare extends Component {
     }
   };
 
+  _increamentScore() {
+    let score = this.state.score + 10;
+    this.setState({ score: score });
+  }
+
   _checkAnswer(e) {
-    if (e.currentTarget.dataset.idx == this.state.question.anwser) {
+    if (e.currentTarget.dataset.idx == this.state.question.answer) {
       this.setState({
-        questionNumber: (++this.state.questionNumber),
+        questionNumber: ++this.state.questionNumber,
         question: this.state.questionList[this.state.questionNumber]
       });
-      // let nextId = this.props.match.params.id.replace(/_/g, "");
-      // this.props.history.push("/questionare/_c1_/_" + ++nextId + "_");
-      // this._getQuestion();
+      this._increamentScore();
+    } else {
+      // 틀리면 힌트를 보여주고 다음 문제를 주자.
     }
-    // 답을 맞추면 스코어 올라가고 다음 문제로 가자.
-    // if(selectedAnswerIdx === this.state.questionList.answer)
-    // 틀리면 힌트를 보여주고 다음 문제를 주자.
   }
 
   _renderAnswers() {
     let idx = 0;
     return (
-      <div>
+      <Jumbotron>
         <div>문제: {this.state.question.QuestionName}</div>
         <ul>
           {Object.keys(this.state.question.answerText).map((answerKey, i) => {
@@ -103,7 +108,7 @@ class Questionare extends Component {
             );
           })}
         </ul>
-      </div>
+      </Jumbotron>
     );
   }
 
@@ -111,7 +116,12 @@ class Questionare extends Component {
     return (
       <div className="wrapper">
         <Nav />
-        {this.state.questionList ? this._renderQuestion() : <div>Loading...</div>}
+        <Progress value={this.state.score} />
+        {this.state.questionList ? (
+          this._renderQuestion()
+        ) : (
+          <div>Loading...</div>
+        )}
         <Footer />
       </div>
     );

@@ -1,6 +1,26 @@
 .circle {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
+  border: none;
   border-radius: 50%;
-  background-color: #01dfa5;
+  color: #ffc107;
+  margin-bottom: 15px;
+  background-color: #212529;
+}
+
+.course_text {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.link:visited {
+  color: #ffc107;
+}
+
+.link {
+  color: #ffc107;
+}
+
+.link:active {
+  color: #ffc107;
 }

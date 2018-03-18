@@ -4,13 +4,14 @@ import "./styles.css";
 
 class Nav extends Component {
   render() {
-    return (
-      <div className="nav">
-        <div className="logo">Programmingo</div>
-        <Button color="warning">로그인</Button>
-        <Button color="warning">회원가입</Button>
-      </div>
-    );
+    return <div className="nav">
+        <div className="logo">
+          <h3>Programmingo</h3>
+        </div>
+        <Button color="warning" className="login_btn">
+          로그인
+        </Button>
+      </div>;
   }
 }
 

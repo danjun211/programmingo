@@ -6,9 +6,6 @@ import "./styles.css";
 import "./courselist.css";
 
 class Courses extends Component {
-
-  
-
   render() {
     console.log(this.props.match.params.id);
     return (
