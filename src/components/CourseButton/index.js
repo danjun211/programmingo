@@ -5,12 +5,14 @@ import "./styles.css";
 
 class CourseButton extends Component {
   render() {
-    return (
-      <div>
-        <button className="coursebutton"><Link to={"/courses/" + this.props.keyName}>{this.props.name}</Link></button>
+    return <div className="course_wrapper">
+        <button className="circle">
+          <Link className="link" to={"/courses/" + this.props.keyName}>
+            <span className="course_text">{this.props.name}</span>
+          </Link>
+        </button>
         <i class="fab fa-android fa-3x" />
-      </div>
-    );
+      </div>;
   }
 }
 

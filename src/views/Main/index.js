@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import CourseButton from "../../components/CourseButton";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { Jumbotron } from "reactstrap";
 import "./styles.css";
 
 class Main extends Component {
   state = {};
 
   categoryNames = {
-    _c1_: "카테고리1",
-    _c2_: "카테고리2",
-    _c3_: "카테고리3"
+    _c1_: "Level 1",
+    _c2_: "Level 2",
+    _c3_: "Level 3"
   };
 
   componentWillMount() {
@@ -42,7 +43,12 @@ class Main extends Component {
     if (this.state.courses) {
       coursesKeys = Object.keys(this.state.courses);
       return coursesKeys.map(courseKey => {
-        return <CourseButton keyName={courseKey} name={this.categoryNames[courseKey]} />;
+        return (
+          <CourseButton
+            keyName={courseKey}
+            name={this.categoryNames[courseKey]}
+          />
+        );
       });
     }
   };
@@ -50,19 +56,13 @@ class Main extends Component {
   render() {
     console.log("did render");
     const { courses } = this.state;
-    // 함수명에 _(언더스코어) 쓰는 이유? 리액트 자체 함수와 나의 함수를 구분하기 위해서
-    // return (
-    //   <div className={movies ? "App" : "App--loading"}>
-    //     {movies ? this._renderCourses() : "Loading"}
-    //   </div>
-    // );
-    return (
-      <div className="Main">
+    return <div>
         <Nav />
-        {this._renderCourses()}
+        <Jumbotron className="course_wrapper">
+          {this._renderCourses()}
+        </Jumbotron>
         <Footer />
-      </div>
-    );
+      </div>;
   }
 }
 
