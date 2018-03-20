@@ -1,5 +1,11 @@
+.course_wrapper.course {
+  display: none;
+}
 @media (max-width: 640px) {
   .course_wrapper.course {
     display: none;
+  }
+  .mobile_course {
+    min-height: 471px;
   }
 }

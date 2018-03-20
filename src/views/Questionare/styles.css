@@ -1,0 +1,13 @@
+.qf {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.if {
+  font-size: 22px;
+  list-style: none;
+}
+
+.question_wrapper {
+  height: 430px;
+}

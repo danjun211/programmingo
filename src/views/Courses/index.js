@@ -10,6 +10,7 @@ import {
   CardText,
   CardImg
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./styles.css";
 import "./courselist.css";
 
@@ -22,19 +23,31 @@ class Courses extends Component {
           <Card>
             <CardBody>
               <CardTitle>기초1</CardTitle>
-              <Button>과정 시작</Button>
+              <Button>
+                <Link className="link" to={"/questionare/_c1_"}>
+                  <span className="btn_start">과정 시작</span>
+                </Link>
+              </Button>
             </CardBody>
           </Card>
           <Card>
             <CardBody>
               <CardTitle>기초2</CardTitle>
-              <Button>과정 시작</Button>
+              <Button>
+              <Link className="link" to={"/questionare/_c2_"}>
+                <span className="btn_start">과정 시작</span>
+              </Link>
+              </Button>
             </CardBody>
           </Card>
           <Card>
             <CardBody>
               <CardTitle>기초3</CardTitle>
-              <Button>과정 시작</Button>
+              <Button>
+              <Link className="link" to={"/questionare/_c3_"}>
+                <span className="btn_start">과정 시작</span>
+              </Link>
+              </Button>
             </CardBody>
           </Card>
         </div>
