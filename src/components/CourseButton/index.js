@@ -7,7 +7,7 @@ class CourseButton extends Component {
   render() {
     return <div className="course_wrapper">
         <button className="circle">
-          <Link className="link" to={"/courses/" + this.props.keyName}>
+          <Link className="link" to={process.env.PUBLIC_URL + "/courses/" + this.props.keyName}>
             <span className="course_text">{this.props.name}</span>
           </Link>
         </button>

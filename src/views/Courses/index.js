@@ -24,7 +24,7 @@ class Courses extends Component {
             <CardBody>
               <CardTitle>기초1</CardTitle>
               <Button>
-                <Link className="link" to={"/questionare/_c1_"}>
+                <Link className="link" to={process.env.PUBLIC_URL + "/questionare/_c1_"}>
                   <span className="btn_start">과정 시작</span>
                 </Link>
               </Button>
@@ -34,7 +34,7 @@ class Courses extends Component {
             <CardBody>
               <CardTitle>기초2</CardTitle>
               <Button>
-              <Link className="link" to={"/questionare/_c2_"}>
+              <Link className="link" to={process.env.PUBLIC_URL + "/questionare/_c2_"}>
                 <span className="btn_start">과정 시작</span>
               </Link>
               </Button>
@@ -44,7 +44,7 @@ class Courses extends Component {
             <CardBody>
               <CardTitle>기초3</CardTitle>
               <Button>
-              <Link className="link" to={"/questionare/_c3_"}>
+              <Link className="link" to={process.env.PUBLIC_URL + "/questionare/_c3_"}>
                 <span className="btn_start">과정 시작</span>
               </Link>
               </Button>
