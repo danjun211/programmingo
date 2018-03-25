@@ -22,7 +22,7 @@ class Questionare extends Component {
     if (this.state.solveCnt + 1 == 6) {
       setTimeout(() => {
         if (window.confirm("가시겠습니까?")) {
-          window.location.href = "/";
+          window.location.href = process.env.PUBLIC_PATH + "/";
         }
       }, 1000);
     }
